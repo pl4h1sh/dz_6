@@ -20,6 +20,11 @@ def normalize(filename):
             filename = filename.replace(char, '_')
     return filename
 
+if len(sys.argv) > 1:
+    directory = sys.argv[1]
+else:
+    directory = '.'
+
 def sort_files(directory):
     images_ext = ('JPEG', 'PNG', 'JPG', 'SVG')
     video_ext = ('AVI', 'MP4', 'MOV', 'MKV')
